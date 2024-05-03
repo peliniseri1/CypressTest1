@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-
+    
     stage('install npm'){
       steps{
         bat '''npm install'''
@@ -14,13 +14,10 @@ pipeline {
         '''
       }
     }
-    stage('test') {
+    stage('test'){
       steps {
-        bat '''
-          bat 'set NO_COLOR=1 && npx cypress run --browser chrome'''
+        bat 'set NO_COLOR=1 && npx cypress run --browser chrome'
       }
     }
-    
-    
   }
 }
