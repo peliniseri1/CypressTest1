@@ -7,7 +7,7 @@ pipeline {
         bat '''npm install'''
       }
     }
-    stage('install cypess') {
+    stage('install cypress') {
       steps {
         bat '''
           npm install cypress
